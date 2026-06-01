@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Maze Survival Quiz</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="ui-top">
+    <div id="health">Health: <span id="health-val">100</span></div>
+    <div id="ammo">Ammo: <span id="ammo-val">0</span></div>
+    <div id="score">Score: <span id="score-val">0</span></div>
+  </div>
+
+  <div id="game-wrap">
+    <canvas id="game-canvas"></canvas>
+  </div>
+
+  <div id="modal" class="hidden">
+    <div id="modal-card">
+      <h3 id="q-text">Question</h3>
+      <div id="q-choices"></div>
+      <button id="q-cancel">Cancel</button>
+    </div>
+  </div>
+
+  <div id="overlay-win" class="overlay hidden">
+    <div class="overlay-card">
+      <h2>You Escaped!</h2>
+      <p id="win-score"></p>
+      <button id="play-again-win">Play Again</button>
+    </div>
+  </div>
+
+  <div id="overlay-lose" class="overlay hidden">
+    <div class="overlay-card">
+      <h2>Game Over</h2>
+      <p id="lose-score"></p>
+      <button id="play-again-lose">Play Again</button>
+    </div>
+  </div>
+
+  <script src="game.js" defer></script>
+</body>
+</html>
